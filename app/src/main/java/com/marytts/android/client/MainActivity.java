@@ -8,8 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+
+import com.marytts.android.link.MaryLink;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText editTtsText = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +22,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        editTtsText = (EditText) findViewById(R.id.editTtsText);
+
+        //initialize MaryTTS and load modules, voice and language modules
+        MaryLink.load(this, this.getResources());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                String text = editTtsText.getText().toString().trim();
+                if(!text.isEmpty()){
+                    MaryLink.getInstance().startButton(text);
+                }
             }
         });
     }
