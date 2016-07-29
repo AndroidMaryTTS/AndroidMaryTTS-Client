@@ -34,5 +34,5 @@ Android TTS client application based on MaryTTS, using gradle and maven reposito
 ```
  	MaryLink.getInstance().startTTS(text);
 	
-	MaryLink.getInstance().stopTTS(text);
+	MaryLink.getInstance().stopTTS();
 ```
