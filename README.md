@@ -1,10 +1,10 @@
 # AndroidMaryTTS-Client
-Android TTS client application based on MaryTTS, using gradle and maven repository centers. Actually support only ENG language but in feature will other ones. Can add your own hmm based voice as speaker with using [Marytts-Andorid](https://github.com/AndroidMaryTTS/AndroidMaryTTS). 
+Android TTS client application based on MaryTTS, using gradle and maven repository centers. Actually support only ENG language but in feature will other ones. Can add your own hmm based voice as speaker with using [Marytts-Andorid](https://github.com/AndroidMaryTTS/AndroidMaryTTS).
 
 #How to use: 
 
 
-1. Add below script to build.gradle(app) file : 
+1) Add below script to build.gradle(app) file : 
 ```
   android {
   	    defaultConfig {
@@ -19,18 +19,18 @@ Android TTS client application based on MaryTTS, using gradle and maven reposito
   	    }
   }
 ```
-2. Also, other one to build.gradle (module) where tts will use : 
+2) Also, other one to build.gradle (module) where tts will use : 
 ```
 	dependencies {
 	    compile 'com.marytts.android:marylib:1.0.1'
 	}
 ```
 
-3. Load code marytts-android voise and language models on startup your project. It takes a few seconds. But in future will be so fast : 
+3) Load code marytts-android voise and language models on startup your project. It takes a few seconds. But in future will be so fast : 
 ```
 	MaryLink.load(Context context); 
 ```
-4. Last one to speak or stop what you write : 
+4) Last one to speak or stop what you write : 
 ```
  	MaryLink.getInstance().startTTS(text);
 	
