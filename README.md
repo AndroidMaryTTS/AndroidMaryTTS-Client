@@ -1,7 +1,7 @@
 # Android MaryTTS-Client
 Android TTS client application based on MaryTTS, using gradle and maven repository centers. Actually support only ENG language but in feature will other ones. Can add your own hmm based voice as speaker with using [Marytts Andorid](https://github.com/AndroidMaryTTS/AndroidMaryTTS).
 
-If you want to quicky check app on mobile device, you can simply download it from [Play Store](https://play.google.com/store/apps/details?id=com.marytts.android.client).
+If you want to quicky check app on mobile device, you can simply download it from [Play Store](https://play.google.com/store/apps/details?id=com.marytts.android).
 
 #How to use: 
 
