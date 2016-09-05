@@ -28,11 +28,11 @@ If you want to quicky check app on mobile device, you can simply download it fro
 ```
 
 3) Load code marytts-android voise and language models on startup your project. It takes a few seconds. But in future will be so fast : 
-```
+```java
 	MaryLink.load(Context context); 
 ```
 4) Last one to speak or stop what you write : 
-```
+```java
  	MaryLink.getInstance().startTTS(text);
 	
 	MaryLink.getInstance().stopTTS();
