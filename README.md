@@ -6,7 +6,8 @@ If you want to quicky check app on mobile device, you can simply download it fro
 #How to use: 
 
 1) Add below script to build.gradle(app) file : 
-```
+
+```groovy
   android {
   	    defaultConfig {
         		multiDexEnabled true
@@ -20,18 +21,23 @@ If you want to quicky check app on mobile device, you can simply download it fro
   	    }
   }
 ```
+
 2) Also, other one to build.gradle (module) where tts will use : 
-```
+
+```groovy
 	dependencies {
 	    compile 'com.marytts.android:marylib:1.0.1'
 	}
 ```
 
 3) Load code marytts-android voise and language models on startup your project. It takes a few seconds. But in future will be so fast : 
+
 ```java
 	MaryLink.load(Context context); 
 ```
+
 4) Last one to speak or stop what you write : 
+
 ```java
  	MaryLink.getInstance().startTTS(text);
 	
